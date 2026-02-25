@@ -1,62 +1,44 @@
-let listings = [];
-
-fetch('/listings.json', { cache: 'no-store' })
-  .then(r => r.json())
+fetch('listings.json')
+  .then(res => res.json())
   .then(data => {
-    listings = data;
-    renderListings();
+    renderListings(data.active, 'active-listings', false);
+    renderListings(data.sold, 'sold-listings', true);
+
+    document.getElementById('more-sold-link').href = data.moreSoldLink;
   });
 
-function renderListings(){
-  const container = document.getElementById('listings');
-  container.innerHTML = '';
-  listings.forEach((l, idx) => {
-    container.appendChild(createListing(l, idx));
+function renderListings(listings, containerId, isSold) {
+  const container = document.getElementById(containerId);
+
+  listings.forEach(listing => {
+    const card = document.createElement('a');
+    card.className = 'listing-card';
+    card.href = listing.zillowUrl;
+    card.target = '_blank';
+    card.rel = 'noopener';
+
+    card.innerHTML = `
+      <img
+        src="${listing.photos[0]}"
+        alt="Photo of ${listing.address}"
+        class="listing-image"
+      />
+
+      <div class="listing-info">
+        <h3>${listing.address}</h3>
+
+        <p class="price">
+          ${isSold
+            ? `Sold for $${listing.price.toLocaleString()}`
+            : `$${listing.price.toLocaleString()}`
+          }
+        </p>
+
+        ${listing.beds ? `<p>${listing.beds} bd · ${listing.baths} ba</p>` : ''}
+        ${listing.soldDate ? `<p class="sold-date">Sold ${listing.soldDate}</p>` : ''}
+      </div>
+    `;
+
+    container.appendChild(card);
   });
-}
-
-function createListing(l, idx){
-  let current = 0;
-
-  const root = document.createElement('article');
-  root.className = 'listing';
-
-  const carousel = document.createElement('div');
-  carousel.className = 'carousel';
-
-  const img = document.createElement('img');
-  img.src = l.photos[0];
-  carousel.appendChild(img);
-
-  const prev = document.createElement('button');
-  prev.className = 'prev';
-  prev.textContent = '‹';
-  prev.onclick = () => {
-    current = (current - 1 + l.photos.length) % l.photos.length;
-    img.src = l.photos[current];
-  };
-
-  const next = document.createElement('button');
-  next.className = 'next';
-  next.textContent = '›';
-  next.onclick = () => {
-    current = (current + 1) % l.photos.length;
-    img.src = l.photos[current];
-  };
-
-  carousel.appendChild(prev);
-  carousel.appendChild(next);
-
-  const body = document.createElement('div');
-  body.className = 'listing-body';
-  body.innerHTML = `
-    <div class="price">$${Number(l.price).toLocaleString()}</div>
-    <div class="address">${l.address}, ${l.city}, ${l.state}</div>
-    <div class="details">${l.beds} Beds · ${l.baths} Baths · ${l.sqft} Sq Ft</div>
-    <div class="description">${l.description}</div>
-  `;
-
-  root.appendChild(carousel);
-  root.appendChild(body);
-  return root;
 }
