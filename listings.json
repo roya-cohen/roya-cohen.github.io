@@ -1,0 +1,37 @@
+[
+  {
+    "id": "maple-123",
+    "title": "Charming family home",
+    "address": "123 Maple St",
+    "city": "Hicksville",
+    "state": "NY",
+    "price": 795000,
+    "beds": 3,
+    "baths": 2,
+    "sqft": 1520,
+    "description": "Light-filled 3 bed, 2 bath with large backyard.",
+    "photos": [
+      "/assets/listings/maple-123/photo-1.jpg",
+      "/assets/listings/maple-123/photo-2.jpg",
+      "/assets/listings/maple-123/photo-3.jpg"
+    ],
+    "url": ""
+  },
+  {
+    "id": "oak-456",
+    "title": "Modern townhome",
+    "address": "456 Oak Ave",
+    "city": "Garden City",
+    "state": "NY",
+    "price": 1125000,
+    "beds": 4,
+    "baths": 3,
+    "sqft": 2100,
+    "description": "Open-concept townhome close to downtown.",
+    "photos": [
+      "/assets/listings/oak-456/photo-1.jpg",
+      "/assets/listings/oak-456/photo-2.jpg"
+    ],
+    "url": "https://example.com/listings/oak-456"
+  }
+]

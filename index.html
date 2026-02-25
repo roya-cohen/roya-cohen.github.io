@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <!-- SEO: tailored for Roya Cohen on Long Island -->
+  <title>Roya Cohen | Real Estate Agent — Long Island, NY</title>
+  <meta name="description" content="Roya Cohen is a licensed real estate agent serving Long Island, New York. View current listings, photos, and contact Roya at (516) 250-1718." />
+  <meta name="author" content="Roya Cohen" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph (social share) -->
+  <meta property="og:title" content="Roya Cohen — Real Estate Agent, Long Island, NY" />
+  <meta property="og:description" content="Browse listings and photos from Roya Cohen, serving Long Island, NY. Contact (516) 250-1718." />
+  <meta property="og:image" content="/assets/headshot.jpg" />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="agent">
+      <img id="agent-headshot" alt="Roya Cohen headshot" src="/assets/headshot.jpg" />
+      <div>
+        <h1 id="agent-name">Roya Cohen — Real Estate Agent, Long Island, NY</h1>
+        <p id="agent-contact">(516) 250-1718 • RoyaCohen0628@gmail.com</p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <!-- Search removed per request. Keep header clean. -->
+    </div>
+  </header>
+
+  <main>
+    <section id="listings" class="listings-grid" aria-live="polite"></section>
+    <div id="empty" class="empty">No listings found.</div>
+  </main>
+
+  <footer class="site-footer">
+    <small>Listings shown from local repository data. Contact Roya at (516) 250-1718.</small>
+  </footer>
+
+  <!-- Gallery modal (hidden until used) -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <button id="modalClose" class="modal-close" aria-label="Close">✕</button>
+    <div class="modal-content">
+      <button id="prevBtn" class="nav-btn" aria-label="Previous photo">‹</button>
+      <img id="modalImage" src="/assets/placeholder.png" alt="Listing photo" />
+      <button id="nextBtn" class="nav-btn" aria-label="Next photo">›</button>
+    </div>
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+
+  <!-- Config & App -->
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+
+  <!-- Schema.org JSON-LD for RealEstateAgent (edit `url` to your GitHub Pages URL after enabling Pages) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Roya Cohen",
+    "image": "https://<your-github-username>.github.io/<repo>/assets/headshot.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Long Island",
+      "addressRegion": "NY",
+      "addressCountry": "US"
+    },
+    "email": "mailto:RoyaCohen0628@gmail.com",
+    "telephone": "+1-516-250-1718",
+    "url": "https://<your-github-username>.github.io/<repo>/",
+    "areaServed": "Long Island NY"
+  }
+  </script>
+</body>
+</html>
