@@ -1,103 +1,33 @@
-{
-  "active": [
-    {
-      "id": "16453-85th-st-howard-beach-ny-11414",
-      "address": "16453 85th St",
-      "city": "Howard Beach",
-      "state": "NY",
-      "zip": "11414",
-      "beds": 6,
-      "baths": 4,
-      "price": 1890000,
-      "status": "for sale",
-      "zillowUrl": "https://www.zillow.com/homedetails/16453-85th-St-Howard-Beach-NY-11414/",
-      "photos": ["assets/listings/16453-85th-st/photo-1.jpg"]
-    },
-    {
-      "id": "1737-pacific-st-brooklyn-ny-11213",
-      "address": "1737 Pacific St",
-      "city": "Brooklyn",
-      "state": "NY",
-      "zip": "11213",
-      "beds": 6,
-      "baths": 3,
-      "price": 1199000,
-      "status": "for sale",
-      "zillowUrl": "https://www.zillow.com/homedetails/1737-Pacific-St-Brooklyn-NY-11213/",
-      "photos": ["assets/listings/1737-pacific-st/photo-1.jpg"]
-    },
-    {
-      "id": "11213-178th-st-jamaica-ny-11433",
-      "address": "11213 178th St",
-      "city": "Jamaica",
-      "state": "NY",
-      "zip": "11433",
-      "beds": 4,
-      "baths": 3,
-      "price": 985000,
-      "status": "for sale",
-      "zillowUrl": "https://www.zillow.com/homedetails/11213-178th-St-Jamaica-NY-11433/",
-      "photos": ["assets/listings/11213-178th-st/photo-1.jpg"]
-    }
-  ],
-
-  "sold": [
-    {
-      "id": "18-woodcrest-road-great-neck-ny-11024",
-      "address": "18 Woodcrest Road",
-      "city": "Great Neck",
-      "state": "NY",
-      "zip": "11024",
-      "price": 2180000,
-      "soldDate": "2025-07-23",
-      "zillowUrl": "https://www.zillow.com/homedetails/18-Woodcrest-Rd-Great-Neck-NY-11024/",
-      "photos": ["assets/listings/18-woodcrest-road/photo-1.jpg"]
-    },
-    {
-      "id": "109-hillsboro-avenue-elmont-ny-11003",
-      "address": "109 Hillsboro Avenue",
-      "city": "Elmont",
-      "state": "NY",
-      "zip": "11003",
-      "price": 719000,
-      "soldDate": "2025-04-15",
-      "zillowUrl": "https://www.zillow.com/homedetails/109-Hillsboro-Ave-Elmont-NY-11003/",
-      "photos": ["assets/listings/109-hillsboro-avenue/photo-1.jpg"]
-    },
-    {
-      "id": "132-31-219th-street-springfield-gardens-ny-11413",
-      "address": "132-31 219th Street",
-      "city": "Springfield Gardens",
-      "state": "NY",
-      "zip": "11413",
-      "price": 1188000,
-      "soldDate": "2024-12-30",
-      "zillowUrl": "https://www.zillow.com/homedetails/132-31-219th-St-Springfield-Gardens-NY-11413/",
-      "photos": ["assets/listings/132-31-219th-street/photo-1.jpg"]
-    },
-    {
-      "id": "115-23-199th-street-saint-albans-ny-11412",
-      "address": "115-23 199th Street",
-      "city": "Saint Albans",
-      "state": "NY",
-      "zip": "11412",
-      "price": 811000,
-      "soldDate": "2024-12-24",
-      "zillowUrl": "https://www.zillow.com/homedetails/115-23-199th-St-Saint-Albans-NY-11412/",
-      "photos": ["assets/listings/115-23-199th-street/photo-1.jpg"]
-    },
-    {
-      "id": "194-08-116th-avenue-saint-albans-ny-11412",
-      "address": "194-08 116th Avenue",
-      "city": "Saint Albans",
-      "state": "NY",
-      "zip": "11412",
-      "price": 975000,
-      "soldDate": "2024-12-18",
-      "zillowUrl": "https://www.zillow.com/homedetails/194-08-116th-Ave-Saint-Albans-NY-11412/",
-      "photos": ["assets/listings/194-08-116th-avenue/photo-1.jpg"]
-    }
-  ],
-
-  "moreSoldLink": "https://www.zillow.com/profile/RoyaCohen#listings-and-sales"
-}
+[
+  {
+    "id": "maple-123",
+    "address": "123 Maple St",
+    "city": "Hicksville",
+    "state": "NY",
+    "price": 795000,
+    "beds": 3,
+    "baths": 2,
+    "sqft": 1520,
+    "description": "A bright and welcoming family home with spacious living areas, updated kitchen, and a private backyard ideal for entertaining.",
+    "photos": [
+      "/assets/listings/maple-123/photo-1.jpg",
+      "/assets/listings/maple-123/photo-2.jpg",
+      "/assets/listings/maple-123/photo-3.jpg"
+    ]
+  },
+  {
+    "id": "oak-456",
+    "address": "456 Oak Ave",
+    "city": "Garden City",
+    "state": "NY",
+    "price": 1125000,
+    "beds": 4,
+    "baths": 3,
+    "sqft": 2100,
+    "description": "Modern townhome featuring open-concept design, premium finishes, and convenient access to shopping, dining, and transit.",
+    "photos": [
+      "/assets/listings/oak-456/photo-1.jpg",
+      "/assets/listings/oak-456/photo-2.jpg"
+    ]
+  }
+]

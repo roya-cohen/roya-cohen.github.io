@@ -1,43 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Roya Cohen | Long Island Real Estate Agent</title>
-  <meta name="description" content="Roya Cohen is a trusted Long Island real estate agent serving Nassau County, Suffolk County, and NYC. View current listings and recent home sales." />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Roya Cohen | Premier Real Estate Agent in Long Island, NY</title>
+  <meta name="description" content="Roya Cohen is an experienced Long Island real estate agent known for trusted guidance, local expertise, and exceptional client service. View current listings and contact Roya today." />
+  <meta name="robots" content="index,follow" />
+
+  <meta property="og:title" content="Roya Cohen — Premier Long Island Real Estate Agent" />
+  <meta property="og:description" content="Browse featured Long Island listings represented by Roya Cohen. Trusted, experienced, and client-focused real estate service." />
+  <meta property="og:image" content="/assets/headshot.jpg" />
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <header class="hero">
-    <img src="assets/headshot.jpg" alt="Roya Cohen Headshot" class="headshot" />
+
+<header class="hero">
+  <img class="hero-headshot" src="/assets/headshot.jpg" alt="Roya Cohen headshot" />
+  <div class="hero-text">
     <h1>Roya Cohen</h1>
-    <p class="tagline">Exceptional Service. Local Expertise. Results That Move You.</p>
-    <p class="contact">
-      <a href="tel:15162501718">(516) 250-1718</a> ·
-      <a href="mailto:RoyaCohen0628@gmail.com">RoyaCohen0628@gmail.com</a>
+    <h2>Premier Real Estate Agent — Long Island, New York</h2>
+    <p class="tagline">
+      Delivering expert guidance, strong negotiation, and trusted results for buyers and sellers across Long Island.
     </p>
-  </header>
+    <p class="contact">
+      📞 (516) 250-1718 · ✉️ RoyaCohen0628@gmail.com
+    </p>
+  </div>
+</header>
 
-  <main>
-    <section>
-      <h2>Active Listings</h2>
-      <div id="active-listings" class="listing-grid"></div>
-    </section>
+<main>
+  <section id="listings" class="listings-vertical"></section>
+</main>
 
-    <section>
-      <h2>Recent Sales</h2>
-      <div id="sold-listings" class="listing-grid sold"></div>
+<footer>
+  <small>© Roya Cohen · Long Island, NY Real Estate</small>
+</footer>
 
-      <p class="more-sold">
-        …and many more homes successfully sold.
-        <a href="#" id="more-sold-link" target="_blank">
-          View full sales history on Zillow →
-        </a>
-      </p>
-    </section>
-  </main>
+<script src="app.js"></script>
 
-  <script src="script.js"></script>
 </body>
 </html>
