@@ -1,10 +1,10 @@
 [
   {
     "id": "maple-123",
-    "address": "123 Maple St",
-    "city": "Hicksville",
+    "address": "PLACEHOLDER",
+    "city": "City",
     "state": "NY",
-    "price": 795000,
+    "price": 123,
     "beds": 3,
     "baths": 2,
     "sqft": 1520,
@@ -17,10 +17,10 @@
   },
   {
     "id": "oak-456",
-    "address": "456 Oak Ave",
-    "city": "Garden City",
+    "address": "PLACEHOLDER 2",
+    "city": "City",
     "state": "NY",
-    "price": 1125000,
+    "price": 123,
     "beds": 4,
     "baths": 3,
     "sqft": 2100,
