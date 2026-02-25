@@ -11,8 +11,8 @@
     "description": "A bright and welcoming family home with spacious living areas, updated kitchen, and a private backyard ideal for entertaining.",
     "photos": [
       "/assets/listings/maple-123/photo-1.jpg",
-      "/assets/listings/maple-123/photo-2.jpg",
-      "/assets/listings/maple-123/photo-3.jpg"
+      "/assets/listings/maple-123/photo-1.jpg",
+      "/assets/listings/maple-123/photo-1.jpg"
     ]
   },
   {
@@ -27,7 +27,7 @@
     "description": "Modern townhome featuring open-concept design, premium finishes, and convenient access to shopping, dining, and transit.",
     "photos": [
       "/assets/listings/oak-456/photo-1.jpg",
-      "/assets/listings/oak-456/photo-2.jpg"
+      "/assets/listings/oak-456/photo-1.jpg"
     ]
   }
 ]
