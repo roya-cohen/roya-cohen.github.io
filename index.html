@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roya Cohen | Premier Real Estate Agent</title>
+  <meta name="description" content="Roya Cohen — Premier Real Estate Agent in Long Island, New York." />
+  <style>
+    :root {
+      --bg: #eef8ff;
+      --surface: rgba(255, 255, 255, 0.92);
+      --surface-strong: #ffffff;
+      --text: #14213d;
+      --muted: #5b6472;
+      --accent: #14b8a6;
+      --accent-dark: #0f766e;
+      --line: rgba(111, 86, 54, 0.18);
+      --shadow: 0 20px 60px rgba(31, 41, 55, 0.10);
+      --radius: 28px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Helvetica, Arial, ui-sans-serif, system-ui, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(139, 111, 71, 0.12), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(31, 41, 55, 0.06), transparent 35%),
+        var(--bg);
+      min-height: 100vh;
+    }
+
+    .wrap {
+      width: min(1080px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 40px;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 4px 22px;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .brand strong {
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      color: var(--accent-dark);
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 24px;
+      align-items: stretch;
+      background: var(--surface);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero-copy {
+      padding: 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: rgba(139, 111, 71, 0.10);
+      color: var(--accent-dark);
+      font-size: 0.92rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.4rem, 5vw, 4.5rem);
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+      color: #18212d;
+    }
+
+    .subtitle {
+      margin: 0;
+      font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+      line-height: 1.7;
+      color: var(--muted);
+      max-width: 56ch;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 999px;
+      padding: 13px 18px;
+      text-decoration: none;
+      font-weight: 600;
+      border: 1px solid transparent;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+      will-change: transform;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn.primary {
+      background: var(--accent);
+      color: white;
+      box-shadow: 0 12px 24px rgba(139, 111, 71, 0.22);
+    }
+
+    .btn.primary:hover { background: var(--accent-dark); }
+
+    .btn.secondary {
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--text);
+      border-color: var(--line);
+    }
+
+    .hero-card {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.03)),
+        linear-gradient(135deg, #e8ddcf 0%, #f8f5ef 100%);
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100%;
+      border-left: 1px solid rgba(111, 86, 54, 0.10);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.03)),
+        linear-gradient(135deg, #e8ddcf 0%, #f8f5ef 100%);
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100%;
+      border-left: 1px solid rgba(111, 86, 54, 0.10);
+    }
+
+    .portrait {
+      width: min(100%, 360px);
+      aspect-ratio: 0.84 / 1;
+      border-radius: 28px;
+      border: 1px dashed rgba(111, 86, 54, 0.35);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.55), rgba(255,255,255,0.30)),
+        radial-gradient(circle at top, rgba(139, 111, 71, 0.18), transparent 50%),
+        rgba(255, 255, 255, 0.7);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 28px;
+      color: var(--accent-dark);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
+    }
+
+    .portrait .icon {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      margin-bottom: 14px;
+      background: rgba(139, 111, 71, 0.12);
+      color: var(--accent-dark);
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .portrait h2 {
+      margin: 0 0 8px;
+      font-size: 1.2rem;
+    }
+
+    .portrait p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 0.98rem;
+    }
+
+    .details {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .detail {
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(111, 86, 54, 0.12);
+      border-radius: 22px;
+      padding: 18px 18px 17px;
+    }
+
+    .detail .label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent-dark);
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .detail .value {
+      font-size: 0.92rem;
+      line-height: 1.5;
+      color: var(--text);
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      max-width: 100%;
+      word-break: break-word;
+    }
+
+    .section {
+      margin-top: 22px;
+      background: var(--surface-strong);
+      border: 1px solid rgba(111, 86, 54, 0.12);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(31,41,55,0.06);
+      padding: 28px 30px;
+    }
+
+    .section h3 {
+      margin: 0 0 12px;
+      font-size: 1.05rem;
+      letter-spacing: -0.01em;
+    }
+
+    .section p {
+      margin: 0;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding: 18px 4px 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .footer a {
+      color: var(--accent-dark);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    @media (max-width: 860px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        border-left: none;
+        border-top: 1px solid rgba(111, 86, 54, 0.10);
+      }
+
+      .details {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy {
+        padding: 34px 24px 24px;
+      }
+
+      .section {
+        padding: 24px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .wrap {
+        width: min(100% - 20px, 1080px);
+        padding-top: 10px;
+      }
+
+      .hero-copy {
+        padding: 28px 18px 18px;
+      }
+
+      .section {
+        padding: 20px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .actions {
+        width: 100%;
+      }
+    }
+  .headshot {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 28px;
+    }
+
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="nav">
+      <div class="brand">
+        <strong>Roya Cohen</strong>
+        <span>Premier Real Estate Agent — Long Island, New York</span>
+      </div>
+      
+    </header>
+
+    <section class="hero" aria-label="Business card style introduction">
+      <div class="hero-copy">
+        <div class="eyebrow">Trusted guidance • Strong negotiation • Local expertise</div>
+        <h1>Roya Cohen</h1>
+        <p class="subtitle">
+          Delivering expert guidance, strong negotiation, and trusted results for buyers and sellers across Long Island.
+        </p>
+
+        <div class="details">
+          <div class="detail">
+            <div class="label">Zillow Profile</div>
+            <div class="value"><a href="https://www.zillow.com/profile/RoyaCohen" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;">https://www.zillow.com/profile/RoyaCohen</a></div>
+          </div>
+          <div class="detail">
+            <div class="label">Direct Phone</div>
+            <div class="value"><a href="tel:+15162501718" style="color:inherit;text-decoration:none;">(516) 250-1718</a></div>
+          </div>
+          <div class="detail">
+            <div class="label">Email Address</div>
+            <div class="value"><a href="mailto:RoyaCohen0628@gmail.com" style="color:inherit;text-decoration:none;">RoyaCohen0628@gmail.com</a></div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="portrait" aria-label="Headshot">
+          <img src="headshot.jpg" alt="Roya Cohen Headshot" class="headshot" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h3>About Roya</h3>
+      <p>
+        A refined, client-first approach with clear communication, calm professionalism, and attention to detail.
+        Ideal for buyers, sellers, and anyone looking for a trusted Long Island real estate partner.
+      </p>
+    </section>
+
+    <div class="footer">
+      <div>Long Island, New York</div>
+      <div></div>
+    </div>
+  </main>
+
+  <script>
+    // Small polish: expose current year if you decide to add it later.
+    document.documentElement.setAttribute('data-year', new Date().getFullYear());
+  </script>
+</body>
+</html>
